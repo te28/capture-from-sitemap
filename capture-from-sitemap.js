@@ -5,30 +5,31 @@ var casper = require('casper').create({
   logLevel: "debug"
 });
 
-// トップページのURLを指定
-var rootUrl = 'https://example.com/';
+// （編集）トップページのURLを指定
+var rootUrl = 'https://example.com/',
+    siteMapPath = 'sitemap/';
 
 // 所定のエレメントからリンク先を順番に取得してくる関数
 function getLinks() {
-  //リンクの箇所を特定できるセレクタを指定。
+  // （編集）リンクの箇所を特定できるセレクタを指定。
   var links = document.querySelectorAll('div.col a');
   return Array.prototype.map.call(links, function(e) {
     return e.getAttribute('href');
   });
 }
 
-// スタート
+// 実行スタート
 // サイトマップページを開く
-casper.start(rootUrl + 'sitemap/');
+casper.start(rootUrl + siteMapPath);
 
 // ページ内のリンクを取得
 casper.then(function() {
-  // リンク先の取得
+  // getLinks関数でリンク先の取得
   links = this.evaluate(getLinks);
   // 取得したリンクを一つづつ開く
   Array.prototype.map.call(links, function (link) {
     casper.thenOpen(rootUrl + link, function() {
-      // TOPのパスが’/’なので、ファイル名は’TOP’にする
+      // TOPのパスが’/’でキャプチャのファイル名が空白になってしまうので、ファイル名は’TOP’にする
       if(link === '/') {
         link = 'top';
       }
