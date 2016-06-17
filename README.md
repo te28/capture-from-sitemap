@@ -15,7 +15,8 @@ PATHも通す必要があります。
 * `rootUrl`に起点となるURLを設定。
 
 ```
-var rootUrl = 'https://example.com/';
+var rootUrl = 'https://example.com/',
+    siteMapPath = 'sitemap/';
 ```
 
 * 取得対象のリンクを特定できるセレクタを指定
