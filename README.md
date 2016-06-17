@@ -5,7 +5,8 @@
 * [phantom.js](http://phantomjs.org/)
 * [caspter.js](http://casperjs.org/)
 
-それぞれ、zipをダウンロード/展開して`C:\`直下に設置して下さい。
+それぞれ、zipをダウンロード/展開して`C:\`直下等に設置して下さい。
+PATHも通す必要があります。
 
 ## 使い方
 
