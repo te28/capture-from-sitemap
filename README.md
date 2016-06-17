@@ -13,6 +13,7 @@ PATHも通す必要があります。
 ### capture-from-sitemap.jsの編集
 
 * `rootUrl`に起点となるURLを設定。
+* `siteMapPath`にサイトマップのパスを設定。
 
 ```
 var rootUrl = 'https://example.com/',
