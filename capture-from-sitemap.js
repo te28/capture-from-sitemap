@@ -12,7 +12,7 @@ var rootUrl = 'https://example.com/',
 // 所定のエレメントからリンク先を順番に取得してくる関数
 function getLinks() {
   // （編集）リンクの箇所を特定できるセレクタを指定。
-  var links = document.querySelectorAll('div.col a');
+  var links = document.querySelectorAll('div.xxx a');
   return Array.prototype.map.call(links, function(e) {
     return e.getAttribute('href');
   });

@@ -22,7 +22,7 @@ var rootUrl = 'https://example.com/',
 * 取得対象のリンクを特定できるセレクタを指定
 
 ```
-var links = document.querySelectorAll('div.col a');
+var links = document.querySelectorAll('div.xxx a');
 ```
 
 ### caspterjsの実行
